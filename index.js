@@ -34,9 +34,9 @@ document.addEventListener ("click", function(e) {
 document.addEventListener ("keypress", function(e) {
     // 4. Pressing the Escape key when the menu is open should close the menu and focus button.hamburger-btn.
     // open menu = var hamburgerMenu class list cont .show-menu
-    if (e.key === "escape" && hamburgerMenu.classList.contains("show-menu")) {
+    if (e.key === "Escape" && hamburgerMenu.classList.contains("show-menu")) {
         toggleMenu(); // close menu
-        // TO DO: focus button.hamburger-btn
+        hamburgerBtn.focus(); // focus button.hamburger-btn
     }
 });
 
