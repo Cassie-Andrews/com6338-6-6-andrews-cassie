@@ -24,14 +24,13 @@ function toggleMenu() {
 hamburgerBtn.addEventListener ("click", toggleMenu);
 
 // ADD EVENT LISTENER FOR CLICK OUTSIDE MENU TO CLOSE 
-//// *BELOW CODE IS CAUSING TESTS TO FAIL
-/* document.addEventListener ("click", function(e) {
-    if (!hamburgerMenu.contains(e.target) && hamburgerMenu.classList.contains("show-menu")) {
+document.addEventListener ("click", function(event) {
+    if (!hamburgerMenu.contains(event.target) && !hamburgerBtn.contains(event.target) && hamburgerMenu.classList.contains("show-menu")) {
         toggleMenu();
     }
     // 2. Clicking outside of .hamburger-menu should close the menu if it is open.
     // 3. Clicking inside of .hamburger-menu should NOT close the menu.
-}); */ 
+});
 
 
 
