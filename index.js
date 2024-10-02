@@ -14,7 +14,7 @@ function toggleMenu() {
     // To hide or show the hamburger menu, you will need to toggle the .show-menu class on the .hamburger-menu element.
     hamburgerMenu.classList.toggle("show-menu");
     // when the menu is open, aria-expanded should be set to true on button.hamburger-btn
-    hamburgerBtn.getAttribute("aria-expanded") === "true";
+    hamburgerBtn.setAttribute("aria-expanded", "true");
     // when the menu is closed, aria-expanded should be set to false on button.hamburger-btn
 }
 
