@@ -16,6 +16,7 @@ function toggleMenu() {
     // when the menu is open, aria-expanded should be set to true on button.hamburger-btn
     hamburgerBtn.setAttribute("aria-expanded", "true");
     // when the menu is closed, aria-expanded should be set to false on button.hamburger-btn
+   //** FIX: hamburgerBtn.setAttribute("aria-expanded", "false"); target btn only with class show-menu=true?
 }
 
 // The hamburger menu should display the following behavior:
@@ -23,19 +24,20 @@ function toggleMenu() {
 // ADD EVENT LISTENER FOR HAMBURGER BUTTON CLICK
 hamburgerBtn.addEventListener ("click", toggleMenu);
 
-
-// 2. Clicking outside of .hamburger-menu should close the menu if it is open.
-// 3. Clicking inside of .hamburger-menu should NOT close the menu.
 // ADD EVENT LISTENER FOR CLICK OUTSIDE MENU TO CLOSE 
-document.addEventListener ("click", function() {
-
+document.addEventListener ("click", function(e) {
+    // 2. Clicking outside of .hamburger-menu should close the menu if it is open.
+    // 3. Clicking inside of .hamburger-menu should NOT close the menu.
 });
 
-
-// 4. Pressing the Escape key when the menu is open should close the menu and focus button.hamburger-btn.
 // ADD EVENT LISTENER FOR ESC KEY PRESS TO CLOSE MENU
-document.addEventListener ("keypress", function() {
-
+document.addEventListener ("keypress", function(e) {
+    // 4. Pressing the Escape key when the menu is open should close the menu and focus button.hamburger-btn.
+    // open menu = var hamburgerMenu class list cont .show-menu
+    if (e.key === "escape" && hamburgerMenu.classList.contains("show-menu")) {
+        toggleMenu(); // close menu
+        // TO DO: focus button.hamburger-btn
+    }
 });
 
 // 5. Under all circumstances, when the menu is open, aria-expanded should be set to true on button.hamburger-btn, and set to false when the menu is closed.
