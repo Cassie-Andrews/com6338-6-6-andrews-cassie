@@ -36,7 +36,8 @@ document.addEventListener ("keydown", function(event) {
     // menu is open if the var hamburgerMenu class list cont .show-menu
     if (event.key === "Escape" && hamburgerMenu.classList.contains("show-menu")) {
         toggleMenu(); // close menu
-        hamburgerBtn.focus(); // focus button.hamburger-btn
+        hamburgerBtn.focus();
+         // focus button.hamburger-btn
     }
 });
 
