@@ -3,6 +3,7 @@
 
 var hamburgerBtn = document.querySelector("button.hamburger-btn");
 var hamburgerMenu = document.querySelector(".hamburger-menu");
+var menuItems = hamburgerMenu.querySelectorAll("li");
 
 // To hide or show the hamburger menu, you will need to toggle the .show-menu class on the .hamburger-menu element.
 // when the menu is open, aria-expanded should be set to true on button.hamburger-btn, and set to false when the menu is closed.
@@ -34,7 +35,7 @@ document.addEventListener ("click", function(event) {
 document.addEventListener ("keydown", function(event) {
     // 4. Pressing the Escape key when the menu is open should close the menu and focus button.hamburger-btn.
     // menu is open if the var hamburgerMenu class list cont .show-menu
-    if (event.key === "Escape" && hamburgerMenu.classList.contains("show-menu")) {
+    if (event.key === "Escape" && hamburgerMenu.classList.contains("show-menu") && !menuItems.focus()) {
         toggleMenu(); // close menu
         hamburgerBtn.focus();
          // focus button.hamburger-btn
