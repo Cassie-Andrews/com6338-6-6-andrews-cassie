@@ -38,13 +38,13 @@ document.addEventListener ("keydown", function(event) {
     // 4. Pressing the Escape key when the menu is open should close the menu and focus button.hamburger-btn.
     // menu is open if the var hamburgerMenu class list cont .show-menu
     if (event.key === "Escape" && hamburgerMenu.classList.contains("show-menu")) {
-        var menuFocus = document.querySelector('.hamburger-menu a').focus(); // check for focused item within the hamburgerMenu
-        
-        if (menuFocus) { // if no menu items are focused then...
         toggleMenu(); // close menu
-        hamburgerBtn.focus(); // focus button.hamburger-btn
-        }
+        hamburgerBtn.focus(); // focus button.hamburger-btn   
     }
+    
 });
 
 // 5. Under all circumstances, when the menu is open, aria-expanded should be set to true on button.hamburger-btn, and set to false when the menu is closed.
+
+
+//STILL FAILING: AssertionError: expected <a href="#">Home</a> to equal <button class="hamburger-btn" aria-expanded="true" aria-controls="main-menu">🍔</button>
